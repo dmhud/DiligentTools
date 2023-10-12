@@ -501,3 +501,7 @@ source_group("include" FILES ${INCLUDE})
 set_target_properties(Diligent-NativeAppBase PROPERTIES
     FOLDER DiligentTools
 )
+
+if(DILIGENT_INSTALL_TOOLS)
+    install_tools_lib(Diligent-NativeAppBase)
+endif()
