@@ -503,5 +503,5 @@ set_target_properties(Diligent-NativeAppBase PROPERTIES
 )
 
 if(DILIGENT_INSTALL_TOOLS)
-    install_tools_lib(Diligent-NativeAppBase)
+    install_target_include_dir(Diligent-NativeAppBase)
 endif()

@@ -38,6 +38,16 @@ function(install_tools_lib _TARGET)
     endif()
 endfunction()
 
+function(install_target_include_dir _TARGET)
+    get_target_relative_dir(${_TARGET} TARGET_RELATIVE_PATH)
+
+    if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/include")
+        install(DIRECTORY    include
+                DESTINATION  "${CMAKE_INSTALL_INCLUDEDIR}/${TARGET_RELATIVE_PATH}/"
+        )
+    endif()
+endfunction()
+
 add_subdirectory(ThirdParty)
 add_subdirectory(TextureLoader)
 add_subdirectory(AssetLoader)
