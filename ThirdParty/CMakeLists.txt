@@ -119,4 +119,11 @@ if(DILIGENT_INSTALL_TOOLS)
         DESTINATION
             "${CMAKE_INSTALL_INCLUDEDIR}/${DILIGENT_TOOLS_DIR}/ThirdParty/imgui"
     )
+    
+    install(
+        FILES
+            imGuIZMO.quat/imGuIZMO.h
+        DESTINATION
+            "${CMAKE_INSTALL_INCLUDEDIR}/${DILIGENT_TOOLS_DIR}/ThirdParty/imGuIZMO.quat"
+    )
 endif()
